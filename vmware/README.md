@@ -11,12 +11,13 @@
    VMWare Network Adapter VMnet1 > View additional properties`
 3. Confirm connectivity to adapter: `ping [default-gateway]`
 4. Edit VM's config file (`.vmx`)
-5. Changed `bridged` to your network adapter's name for `ethernet0.networkName`
-6. Changed `bridged` to your network adapter's name for `ethernet0.displayName`
+5. Replace `bridged` to your network adapter's name for `ethernet0.networkName`
+6. Replace `bridged` to your network adapter's name for `ethernet0.displayName`
 7. Discover VM's IP from adapter's IP range:<br>
-  a. Get IP range: `VMWare > Edit > Virtual Network Editor > Host-only > DHCP
+  a. Boot VM from the `.vmx` file
+  b. Get IP range: `VMWare > Edit > Virtual Network Editor > Host-only > DHCP
      Settings...`<br>
-  b. Enumerate IP range and discover VM's IP: `sudo nmap -sn [ip.range]`
+  c. Enumerate IP range and discover VM's IP: `sudo nmap -sn [ip.range]`
 
 ![](./imgs/./vmware-connect-steps.png)
 
