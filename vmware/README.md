@@ -14,7 +14,7 @@
 5. Replace `bridged` to your network adapter's name for `ethernet0.networkName`
 6. Replace `bridged` to your network adapter's name for `ethernet0.displayName`
 7. Discover VM's IP from adapter's IP range:<br>
-  a. Boot VM from the `.vmx` file
+  a. Boot VM from the `.vmx` file<br>
   b. Get IP range: `VMWare > Edit > Virtual Network Editor > Host-only > DHCP
      Settings...`<br>
   c. Enumerate IP range and discover VM's IP: `sudo nmap -sn [ip.range]`
